@@ -33,6 +33,8 @@ a {
   width: 100%;
   padding: 20px;
   background: #efefef;
+  position: absolute;
+  object-position: center;
 }
 
 .shape {
@@ -41,12 +43,100 @@ a {
   height: 200px;
   background: royalblue;
 }
+@keyframes spin {
+  0% {
+    transform:rotate(0deg);
+  }
+  25% {
+     transform:rotate(90deg);
+  }
+  100% {
+     transform:rotate(360deg);
+  }
+}
+ @keyframes squiggle {
+  0%{
+    background: red;
+    transform:scale(1.0) rotateZ(0deg);
+  }
+  25%{
+    background: red;
+    transform:scale(1.0) rotateZ(9deg);
+  }
+  90%{
+    background: blue;
+    transform:scale(1.7) rotateZ(36deg);
+  }
+  100%{
+    background: blue;
+    transform:scale(1.5) rotateZ(45deg);
+  }
+ }
+ @keyframes fly {
+  0%{
+    background: black;
+    transform:scale(0.5) translate(0px, 0px);
+  }
+  5%{
+    background: black;
+    transform:scale(0.47) translate(15px, 0px);
+  }
+  10%{
+    background: black;
+    transform:scale(0.1) translate(800px, 0px);
+  }
+  25%{
+    background: black;
+    transform:scale(0.34) translate(-450px, -100px);
+  }
+   35%{
+    background: black;
+    transform:scale(0.1) translate(65px, -170px);
+  }
+   47%{
+    background: black;
+    transform:scale(0.28) translate(95px, -330px);
+  }
+   50%{
+    background: black;
+    transform:scale(0.22) translate(130px, -500px);
+  }
+   59%{
+    background: black;
+    transform:scale(0.17) translate(170px, -870px);
+  }
+  79%{
+    background: black;
+    transform:scale(0.01) translate(180px, -4300px);
+  }
+  88%{
+    background: black;
+    transform:scale(0.17) translate(180px, 870px);
+  }
+  100%{
+    background: black;
+    transform:scale(0.17) translate(100px, 1870px);
+  }
+ }
 
 .variation-1 {
+animation-name: fly;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+animation-direction: normal;
+
 }
 
 .variation-2 {
+  animation-name: spin;
+animation-duration: 15s;
+animation-iteration-count: infinite;
+animation-direction: reverse;
 }
 
 .variation-3 {
+  animation-name: spin;
+animation-duration: 50s;
+animation-iteration-count: infinite;
+animation-direction: normal;
 }
